@@ -59,3 +59,12 @@ void GetInput(char player[], int playerNumber) {
     printf("Enter Player %d's choice (Rock, Paper, or Scissors): ", playerNumber);
     scanf("%s", player);
 }
+
+int IsUpperCase(char player[]) {
+    for (int i = 0; player[i]; i++) {
+        if (!isupper(player[i])) {
+            return 0;
+        }
+    }
+    return 1;
+}
