@@ -54,3 +54,8 @@ char* DetermineWinner(char player1[], char player2[]) {
 
     return "Invalid";
 }
+
+void GetInput(char player[], int playerNumber) {
+    printf("Enter Player %d's choice (Rock, Paper, or Scissors): ", playerNumber);
+    scanf("%s", player);
+}
