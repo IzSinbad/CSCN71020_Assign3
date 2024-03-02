@@ -28,4 +28,29 @@ int main() {
     } while (User_Choice == 0);
     return 0;
 }
+char* DetermineWinner(char player1[], char player2[]) {
+    if (strcmp(player1, player2) == 0) {
+        return "Draw";
+    }
 
+    if (strcmp(player1, "ROCK") == 0) {
+        if (strcmp(player2, "PAPER") == 0)
+            return "Player2";
+        else if (strcmp(player2, "SCISSOR") == 0)
+            return "Player1";
+    }
+    else if (strcmp(player1, "PAPER") == 0) {
+        if (strcmp(player2, "ROCK") == 0)
+            return "Player1";
+        else if (strcmp(player2, "SCISSOR") == 0)
+            return "Player2";
+    }
+    else if (strcmp(player1, "SCISSOR") == 0) {
+        if (strcmp(player2, "ROCK") == 0)
+            return "Player2";
+        else if (strcmp(player2, "PAPER") == 0)
+            return "Player1";
+    }
+
+    return "Invalid";
+}
