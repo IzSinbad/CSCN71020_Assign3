@@ -68,3 +68,13 @@ int IsUpperCase(char player[]) {
     }
     return 1;
 }
+
+int UserWish() {
+    int User_Choice;
+    printf("0 to Continue and 1 to EXIT\n");
+    int test_value = scanf("%d", &User_Choice);
+    if (test_value == 1)
+        return User_Choice;
+    else
+        return 1;
+}
